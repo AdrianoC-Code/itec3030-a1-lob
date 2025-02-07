@@ -1,6 +1,6 @@
 /**
  * Copyright (C) Sotirios Liaskos (liaskos@yorku.ca) - All Rights Reserved
- * this is a test by Adriano --- another test 
+ * this is a test by Adriano --- once again testing this to make sure it works
  * This source code is protected under international copyright law.  All rights
  * reserved and protected by the copyright holder.
  * This file is confidential and only available to authorized individuals with the
@@ -55,14 +55,14 @@ public class Exchange {
      */
 	public boolean validateOrder(IOrder o) {
 		// Does ticker exist? See if the security associated with the order exists in the list of securities
-		if (__________________________ == null) {
+		if (o.getSecurity() == null) {
 			System.err.println("Order validation: ticker " + ______________.getTicker() + " not supported.");
 			return (false);
 		}
 		
 		//Does the trader exist? Check to see if the trader exists 
-		if (__________________________ == null) {
-			System.err.println("Order validation: trader with ID " + _______________.getID() + " not registered with the exchange.");
+		if (o.getTrader() == null) {
+			System.err.println("Order validation: trader with ID " + o.getID() + " not registered with the exchange.");
 			return (false);
 		}
 
