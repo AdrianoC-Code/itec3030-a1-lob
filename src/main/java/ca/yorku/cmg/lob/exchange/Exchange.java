@@ -56,7 +56,7 @@ public class Exchange {
 	public boolean validateOrder(IOrder o) {
 		// Does ticker exist? See if the security associated with the order exists in the list of securities
 		if (o.getSecurity() == null) {
-			System.err.println("Order validation: ticker " + ______________.getTicker() + " not supported.");
+			System.err.println("Order validation: ticker " +  securities.getSecurityByTicker(o.getSecurity().getTicker()) + " not supported.");
 			return (false);
 		}
 		
@@ -67,13 +67,14 @@ public class Exchange {
 		}
 
 		//Put in pos the position that the trader mentioned in the order has in the security mentioned in the order
-		int pos = ___________________________________;
+		int pos = accounts.getTraderAccount(o.getTrader()).getPosition(o.getSecurity().getTicker());
+
 		//Get the balance the trader has with the exchange
 		long bal = __________________________________;
 
 		// Does ask trader have position at the security sufficient for a sell?
 		if ((o instanceof Ask) && (pos < o.getQuantity())) {
-			System.err.println("Order validation: seller with ID " + _________.getID() + " not enough shares of " + _________.getTicker() + ": has " + pos + " and tries to sell " + _____.getQuantity());
+			System.err.println("Order validation: seller with ID " + o.getID() + " not enough shares of " + securities.getSecurityByTicker(o.getSecurity().getTicker()) + ": has " + pos + " and tries to sell " + o.getQuantity());
 			return (false);
 		}
 		
@@ -81,7 +82,7 @@ public class Exchange {
 		if ((o instanceof Bid) && (bal < o.getValue())) {
 			System.err.println(
 					String.format("Order validation: buyer with ID %d does not have enough balance: has $%,.2f and tries to buy for $%,.2f",
-							____________.getID(), bal/100.0,o.getValue()/100.0));
+							o.getID(), bal/100.0,o.getValue()/100.0));
 					
 			return (false);
 		}
@@ -134,7 +135,7 @@ public class Exchange {
 			//Update balances for Buyer
 			
 			//Get the fee that they buyer is supposed to pay
-			_______________________________________________;
+			t.getBuyerFee();
 			//Apply the above fee to the account balance of the buyer 			
 			_______________________________________________;
 			//Apply the trade payment to the account balance of the buyer (they spent money)
