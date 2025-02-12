@@ -1,6 +1,6 @@
 /**
  * Copyright (C) Sotirios Liaskos (liaskos@yorku.ca) - All Rights Reserved
- * this is a test by Adriano --- once again testing this to make sure it works
+ * this is a test by Adriano --- final test ---
  * This source code is protected under international copyright law.  All rights
  * reserved and protected by the copyright holder.
  * This file is confidential and only available to authorized individuals with the
@@ -70,7 +70,7 @@ public class Exchange {
 		int pos = accounts.getTraderAccount(o.getTrader()).getPosition(o.getSecurity().getTicker());
 
 		//Get the balance the trader has with the exchange
-		long bal = __________________________________;
+		long bal = accounts.getTraderAccount(o.getTrader()).getBalance();
 
 		// Does ask trader have position at the security sufficient for a sell?
 		if ((o instanceof Ask) && (pos < o.getQuantity())) {
@@ -106,19 +106,19 @@ public class Exchange {
 		//This is a bid for a security
 		if (o instanceof Bid) {// Order is a bid
 			//Go to the asks half-book, see if there are matching asks (selling offers) and process them
-			oOutcome = ____________.processOrder(o, time);
+			oOutcome = book.getAsks().processOrder(o, time);
 			//If the quanity of the unfulfilled order in the outcome is not zero
-			if (_____________________ > 0) {
+			if (o.getQuantity() > 0) {
 				//Not the entire order was fulfilled, add the unfulfilled order to the bid half-book 
-				_______________________________________________;
+				book.getBids().addOrder((Bid) o);
 			}
 		} else { //order is an ask
 			//Go to the bids half-book and see if there are matching bids (buying offers) and process them
-			oOutcome = ____________.processOrder(o, time);
+			oOutcome = book.getBids().processOrder(o, time);
 			//If the quanity of the unfulfilled order in the outcome is not zero
 			if (oOutcome.getUnfulfilledOrder().getQuantity() > 0) {
 				// Not the entire order was fulfilled, add it to the bid half-book
-				_______________________________________________;
+				book.getBids().addOrder((Bid) o);
 			}			
 		}
 
@@ -137,22 +137,22 @@ public class Exchange {
 			//Get the fee that they buyer is supposed to pay
 			t.getBuyerFee();
 			//Apply the above fee to the account balance of the buyer 			
-			_______________________________________________;
+			accounts.getTraderAccount(t.getBuyer()).applyFee(t);
 			//Apply the trade payment to the account balance of the buyer (they spent money)
-			_______________________________________________;
+			accounts.getTraderAccount(t.getBuyer()).withdrawMoney(t.getPrice());
 			//Add the bought stocks to the position of the buyer
-			_______________________________________________;
+			accounts.getTraderAccount(t.getBuyer()).addToPosition(o.getSecurity().getTicker(),t.getQuantity());
 			
 			//Update balances for Seller
 			
 			//Get the fee that the seller is supposed to pay
-			_______________________________________________;
+			t.getSellerFee(); 
 			//Apply the above fee to the account balance of the seller
-			_______________________________________________;
+			accounts.getTraderAccount(t.getSeller()).applyFee(t);;
 			//Apply the trade payment to the account balance of the seller (they earned money)
-			_______________________________________________;
+            accounts.getTraderAccount(t.getSeller()).withdrawMoney(t.getPrice());
 			//Deduct the sold stocks from the position of the seller
-			_______________________________________________;
+            accounts.getTraderAccount(t.getBuyer()).deductFromPosition(o.getSecurity().getTicker(),t.getQuantity());
 			
 			this.totalFees += t.getBuyerFee() + t.getSellerFee(); 
 		}
