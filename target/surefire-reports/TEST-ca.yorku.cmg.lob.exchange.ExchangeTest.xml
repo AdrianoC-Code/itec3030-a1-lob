@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="ca.yorku.cmg.lob.exchange.ExchangeTest" time="0.068" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="ca.yorku.cmg.lob.exchange.ExchangeTest" time="0.053" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/surefire/surefirebooter-20250213233950997_3.jar /Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/surefire 2025-02-13T23-39-50_897-jvmRun1 surefire-20250213233950997_1tmp surefire_0-20250213233950997_2tmp"/>
+    <property name="sun.java.command" value="/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/surefire/surefirebooter-20250214214442058_3.jar /Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/surefire 2025-02-14T21-44-42_000-jvmRun1 surefire-20250214214442058_1tmp surefire_0-20250214214442058_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/test-classes:/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/classes:/Users/adri/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/Users/adri/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/adri/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/Users/adri/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/adri/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/bin/lib/core-0.0.1-SNAPSHOT.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/surefire/surefirebooter-20250213233950997_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/adri/Desktop/ITEC 3030_REPOS/itec3030-a1-lob/target/surefire/surefirebooter-20250214214442058_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.2+7-58"/>
@@ -57,84 +57,128 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testSubmitOrder" classname="ca.yorku.cmg.lob.exchange.ExchangeTest" time="0.049">
-    <failure message="expected: &lt;[  3  MSFT   880.77        14       230     23]&#10;[  7  MSFT   914.54        27      1250    125]&#10;[  8  GOOG   249.41        23       870     87]&#10;[  6  GOOG   253.95        45       290     29]&#10;[  4  GOOG   267.21        21      1090    109]&#10;[  3  GOOG   278.70         5       160     16]&#10;[  7  GOOG   351.53        49       450     45]&#10;[  2  GOOG   455.82        20       470     47]&#10;[  4  META  1011.28        26       960     96]&#10;[  1  META  1061.73        26       500     50]&#10;[  2  META  1070.07        45       350     35]&#10;[  5  META  1074.56        20       840     84]&#10;[  4  NVDA   187.27        36      1230    123]&#10;[  1  NVDA   200.80        13      1150    115]&#10;[  8  NVDA   265.12         1       340     34]&#10;[  2  NVDA   287.82        27      1220    122]&#10;[  2  AAPL   273.57        21      1040    104]&#10;[  3  AAPL   361.50         2       480     48]&#10;[  5  AAPL   458.30        47      1120    112]&#10;[  8  AAPL   496.14        49       540     54]&#10;[  7  AAPL   555.54        18       330     33]&#10;[  7  TSLA   657.61        27      1190    119]&#10;[  3  TSLA   722.30        38        30      3]&#10;[  7  AVGO   435.33        18      1110    111]&#10;[  1  AMZN   279.87        11      1010    101]&#10;[  4  AMZN   295.78        17       820     82]&#10;[  6  AMZN   303.42         8       360     36]&#10;[  5  AMZN   335.44        19      1130    113]&#10;[  3  AMZN   443.67        47       790     79]&#10;&gt; but was: &lt;[  3  MSFT   880.77        14       230     23]&#10;[  7  MSFT   914.54        27      1250    125]&#10;[  8  GOOG   249.41        23       870     87]&#10;[  6  GOOG   253.95        19       290     29]&#10;[  4  GOOG   267.21        21      1090    109]&#10;[  3  GOOG   278.70         5       160     16]&#10;[  7  GOOG   351.53        49       450     45]&#10;[  2  GOOG   455.82        20       470     47]&#10;[  4  META  1011.28        26       960     96]&#10;[  1  META  1061.73        26       500     50]&#10;[  2  META  1070.07        45       350     35]&#10;[  5  META  1074.56        20       840     84]&#10;[  4  NVDA   187.27        36      1230    123]&#10;[  1  NVDA   200.80        13      1150    115]&#10;[  8  NVDA   265.12         1       340     34]&#10;[  2  NVDA   287.82        27      1220    122]&#10;[  2  AAPL   273.57        14      1040    104]&#10;[  5  AAPL   458.30        47      1120    112]&#10;[  6  AAPL   464.60        10       900     90]&#10;[  8  AAPL   496.14        49       540     54]&#10;[  7  AAPL   555.54        18       330     33]&#10;[  7  TSLA   657.61        27      1190    119]&#10;[  3  TSLA   722.30        38        30      3]&#10;[  7  AVGO   435.33        18      1110    111]&#10;[  5  AMZN   335.44         7      1130    113]&#10;[  3  AMZN   443.67        47       790     79]&#10;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
-expected: <[  3  MSFT   880.77        14       230     23]
-[  7  MSFT   914.54        27      1250    125]
-[  8  GOOG   249.41        23       870     87]
-[  6  GOOG   253.95        45       290     29]
-[  4  GOOG   267.21        21      1090    109]
-[  3  GOOG   278.70         5       160     16]
-[  7  GOOG   351.53        49       450     45]
-[  2  GOOG   455.82        20       470     47]
-[  4  META  1011.28        26       960     96]
-[  1  META  1061.73        26       500     50]
-[  2  META  1070.07        45       350     35]
-[  5  META  1074.56        20       840     84]
-[  4  NVDA   187.27        36      1230    123]
-[  1  NVDA   200.80        13      1150    115]
-[  8  NVDA   265.12         1       340     34]
-[  2  NVDA   287.82        27      1220    122]
-[  2  AAPL   273.57        21      1040    104]
-[  3  AAPL   361.50         2       480     48]
-[  5  AAPL   458.30        47      1120    112]
-[  8  AAPL   496.14        49       540     54]
-[  7  AAPL   555.54        18       330     33]
-[  7  TSLA   657.61        27      1190    119]
-[  3  TSLA   722.30        38        30      3]
-[  7  AVGO   435.33        18      1110    111]
-[  1  AMZN   279.87        11      1010    101]
-[  4  AMZN   295.78        17       820     82]
-[  6  AMZN   303.42         8       360     36]
-[  5  AMZN   335.44        19      1130    113]
-[  3  AMZN   443.67        47       790     79]
-> but was: <[  3  MSFT   880.77        14       230     23]
-[  7  MSFT   914.54        27      1250    125]
-[  8  GOOG   249.41        23       870     87]
-[  6  GOOG   253.95        19       290     29]
-[  4  GOOG   267.21        21      1090    109]
-[  3  GOOG   278.70         5       160     16]
-[  7  GOOG   351.53        49       450     45]
-[  2  GOOG   455.82        20       470     47]
-[  4  META  1011.28        26       960     96]
-[  1  META  1061.73        26       500     50]
-[  2  META  1070.07        45       350     35]
-[  5  META  1074.56        20       840     84]
-[  4  NVDA   187.27        36      1230    123]
-[  1  NVDA   200.80        13      1150    115]
-[  8  NVDA   265.12         1       340     34]
-[  2  NVDA   287.82        27      1220    122]
-[  2  AAPL   273.57        14      1040    104]
-[  5  AAPL   458.30        47      1120    112]
-[  6  AAPL   464.60        10       900     90]
-[  8  AAPL   496.14        49       540     54]
-[  7  AAPL   555.54        18       330     33]
-[  7  TSLA   657.61        27      1190    119]
-[  3  TSLA   722.30        38        30      3]
-[  7  AVGO   435.33        18      1110    111]
-[  5  AMZN   335.44         7      1130    113]
-[  3  AMZN   443.67        47       790     79]
->
+  <testcase name="testSubmitOrder" classname="ca.yorku.cmg.lob.exchange.ExchangeTest" time="0.042">
+    <failure message="expected: &lt;       $1,154.50&gt; but was: &lt;           $0.00&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <       $1,154.50> but was: <           $0.00>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ca.yorku.cmg.lob.exchange.ExchangeTest.testSubmitOrder(ExchangeTest.java:59)
+	at ca.yorku.cmg.lob.exchange.ExchangeTest.testSubmitOrder(ExchangeTest.java:194)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 ]]></failure>
-    <system-err><![CDATA[Order validation: buyer with ID 24 does not have enough balance: has $4,714.02 and tries to buy for $28,968.30
-Order validation: buyer with ID 46 does not have enough balance: has $4,714.02 and tries to buy for $7,318.48
-Order validation: buyer with ID 57 does not have enough balance: has $3,853.30 and tries to buy for $17,673.18
-Order validation: buyer with ID 64 does not have enough balance: has $3,853.30 and tries to buy for $16,477.92
-Order validation: buyer with ID 68 does not have enough balance: has $2,827.88 and tries to buy for $7,024.92
-Order validation: buyer with ID 88 does not have enough balance: has $2,732.94 and tries to buy for $6,420.40
-Order validation: seller with ID 90 not enough shares of ca.yorku.cmg.lob.security.Security@79e2c065: has 31 and tries to sell 37
-Order validation: seller with ID 121 not enough shares of ca.yorku.cmg.lob.security.Security@4efbca5a: has 20 and tries to sell 44
-Order validation: buyer with ID 124 does not have enough balance: has $1,752.63 and tries to buy for $16,101.12
+    <system-out><![CDATA[
+
+ *** T r a d e s    E x e c u t e d ***
+
+[From____  To______  Tkr_  Quantity  Price__  Time____]
+[       5         2  GOOG        34   281.48        80]
+[       3         2  GOOG         6   278.70       160]
+[       6         1  MSFT        23   665.95       180]
+[       7         4  NVDA        11   113.68       190]
+[       4         1  AVGO        10   186.06       250]
+[       2         4  TSLA        27   527.13       410]
+[       2         6  TSLA         6   527.13       410]
+[       2         8  MSFT        22   488.49       440]
+[       6         5  GOOG        26   253.95       460]
+[       5         8  MSFT        16   425.86       520]
+[       5         6  MSFT        25   425.86       520]
+[       4         3  TSLA        12   669.63       550]
+[       6         1  NVDA        34   169.38       580]
+[       2         4  AMZN        13   277.85       590]
+[       8         4  AMZN        17   283.60       590]
+[       6         3  TSLA        13   553.72       630]
+[       6         8  TSLA        18   553.72       630]
+[       4         5  AAPL        36   283.66       640]
+[       4         7  AAPL         3   283.66       650]
+[       3         7  AAPL        31   361.50       650]
+[       1         6  GOOG        16   228.01       660]
+[       5         8  TSLA        32   508.21       670]
+[       5         6  TSLA         9   508.21       670]
+[       6         3  MSFT         5   665.95       710]
+[       8         3  MSFT        31   642.54       720]
+[       6         2  NVDA         3   169.38       730]
+[       8         2  NVDA        47   265.12       730]
+[       5         6  NVDA        32    90.44       740]
+[       6         3  AMZN        18   303.42       750]
+[       3         6  AAPL         8   361.50       760]
+[       1         6  AAPL        17   263.94       780]
+[       1         4  AAPL         4   263.94       780]
+[       1         7  AVGO        24   414.07       800]
+[       4         3  MSFT        11   476.85       860]
+[       4         6  MSFT         9   476.85       860]
+[       6         7  AVGO        11   350.71       910]
+[       8         7  AVGO        14   333.70       920]
+[       8         1  AVGO        14   333.70       920]
+[       8         2  META        24   671.16       930]
+[       3         2  META        14   693.55       930]
+[       1         5  TSLA        21   281.15       940]
+[       1         1  TSLA         4   281.15       940]
+[       6         8  AAPL        27   464.60      1000]
+[       1         4  AMZN        12   279.87      1010]
+[       3         1  AVGO         3   292.86      1020]
+[       3         8  AVGO        23   292.86      1020]
+[       5         7  TSLA         7   508.21      1030]
+[       8         7  TSLA        20   646.84      1030]
+[       2         4  AAPL         7   273.57      1040]
+[       3         8  NVDA        31   212.34      1060]
+[       5         8  AVGO        23   229.30      1070]
+[       5         6  AVGO        11   229.30      1070]
+[       4         2  MSFT         9   476.85      1080]
+[       3         6  META        15   693.55      1100]
+[       7         6  META        29   712.47      1100]
+[       1         8  NVDA        19   200.80      1150]
+[       1         7  MSFT        21   745.05      1170]
+[       3         7  MSFT        18   880.77      1170]
+[       7         1  META         2   712.47      1180]
+[       6         1  META        22   776.36      1180]
+[       4         1  META         3  1011.28      1180]
+[       7         7  TSLA        18   657.61      1190]
+[       1         1  GOOG         2   228.01      1200]
+[       1         5  AMZN        11   279.87      1240]
+[       4         5  AMZN        17   295.78      1240]
+[       6         5  AMZN         8   303.42      1240]
+[       5         5  AMZN        12   335.44      1240]
+[       2         6  AVGO        10   270.21      1270]
+[       2         3  AVGO        16   270.21      1270]
+
+
+
+ *** O r i g i n a l   B a l a n c e s ***
+
+[_Institution_____________________ Balance_________]
+[ 1                Bank of Toronto  $100,000,000.00]
+[ 2             Bank of North York   $50,000,000.00]
+[ 3 Government Workers Pension Fun   $40,000,000.00]
+[ 4                  ABC Bank Fund   $25,000,000.00]
+[ 5                     John Smith        $5,000.00]
+[ 6                    Alice Smith      $100,000.00]
+[ 7                     Smith Fund    $1,000,000.00]
+[ 8  Three little pigs investments   $10,000,000.00]
+[                           TOTAL:  $226,105,000.00]
+
+
+
+ *** N e w   B a l a n c e s ***
+
+[_Institution_____________________ Balance_________]
+[ 1                Bank of Toronto  $100,000,695.54]
+[ 2             Bank of North York   $49,986,234.08]
+[ 3 Government Workers Pension Fun   $40,012,261.73]
+[ 4                  ABC Bank Fund   $25,012,444.22]
+[ 5                     John Smith       $33,785.64]
+[ 6                    Alice Smith      $117,059.21]
+[ 7                     Smith Fund      $944,678.10]
+[ 8  Three little pigs investments    $9,996,686.98]
+[                           TOTAL:  $226,103,845.50]
+
+            Fees Collected TOTAL:            $0.00
+]]></system-out>
+    <system-err><![CDATA[Order validation: buyer with ID 5 does not have enough balance: has $14,565.82 and tries to buy for $28,968.30
+Order validation: seller with ID 7 not enough shares of AMZN: has 20 and tries to sell 44
 ]]></system-err>
   </testcase>
 </testsuite>
